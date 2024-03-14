@@ -1,1 +1,1 @@
-require('config.ivim')
+require('core.ivim')

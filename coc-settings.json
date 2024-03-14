@@ -1,0 +1,21 @@
+{
+	"languageserver": {
+		"clangd": {
+			"command": "clangd",
+			"filetypes": ["c", "cc", "cpp", "c++"]
+		},
+		"cmake": {
+			"command": "cmake-language-server",
+			"filetypes": ["cmake"]
+		},
+		"lua": {
+			"command": "lua-language-server",
+			"filetypes": ["lua"]
+		}
+	},	
+	"python.analysis.extraPaths": ["C:\\Users\\i_zabrodin23\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages"],
+	"semanticTokens.enable": true,
+	"pyright.inlayHints.variableTypes": false,
+	"pyright.inlayHints.parameterTypes": false,
+	"dialog.confirmKey": "<cr>"
+}
