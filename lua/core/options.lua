@@ -16,10 +16,16 @@ M.load = function ()
 	set.foldenable = false
 
 	set.relativenumber = true
-	set.signcolumn = "yes"
+	set.fillchars = [[eob: ,fold: ,foldopen:,foldsep:│,foldclose:]]
+	set.foldcolumn = "3"
+	set.statuscolumn = opts.cursorcolumn
+
+	set.clipboard = 'unnamed'
 
 	vim.g.loaded_netrw = true
 	vim.g.loaded_netrwPlugin = true
+	vim.g.coc_config_home = 'C:/Users/i_zabrodin23/AppData/Local/nvim/'
+	vim.g.coc_data_home = 'C:/Users/i_zabrodin23/AppData/Local/coc/'
 end
 
 return M

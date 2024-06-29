@@ -14,6 +14,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
+require('core.options').load()
+
 require('lazy').setup({
     spec = { { import = 'plugins' }, },
 })
@@ -21,8 +23,9 @@ require('lazy').setup({
 local theme = require('core.theme')
 theme.load()
 
+require('core.usrcommands').load()
 require('core.plugger').load()
 require('core.keymaps').load()
-require('core.options').load()
+require('core.autocmds')
 
 theme.override()

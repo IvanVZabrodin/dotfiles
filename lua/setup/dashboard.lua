@@ -38,6 +38,9 @@ M.load = function ()
 					key = "d"
 				},
 			},
+			project = {
+				enable = false, -- limit = 8, icon = '  ', label = 'Code Directories', action = 'Telescope find_files cwd='
+			},
 		},
 	}
 end

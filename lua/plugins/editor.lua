@@ -11,4 +11,9 @@ return {
 	{ "fannheyward/telescope-coc.nvim" },
 	{ "nvim-telescope/telescope-fzy-native.nvim" },
 	{ "folke/which-key.nvim", event = "VeryLazy" },
+	{ "RaafatTurki/hex.nvim" },
+	{
+		dir = "C:/users/i_zabrodin23/Code/Neonote",
+		name = "Neonote"
+	}
 }

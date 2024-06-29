@@ -38,21 +38,28 @@ M.load_lsp = function ()
 	map('n', m.implementation, [[<Plug>(coc-implementation)]], {silent = true})
 	map('n', m.references, [[<Plug>(coc-references)]], {silent = true})
 
-	map('n', m.rename, [[<Plug>(coc-rename)]], {silent=true})
+	map('n', m.rename, [[<Plug>(coc-rename)]], {silent = true})
 
-	map('n', m.show_docs, [[<CMD>lua U.show_docs()<CR>]], {silent=true})
+	map('n', m.show_docs, U.show_docs, {silent = true})
+
+	map('n', m.comment_section, [[<CMD>Commsect<CR>]], {silent = true})
 end
 
 M.load_navigation = function ()
 	local m = mappings.navigation
 
-	map('n', m.filesystem, [[<CMD>Neotree<CR>]], {silent=true})
-	map('n', m.bufferline, [[<CMD>BufferLinePick<CR>]], {silent=true})
+	map('n', m.filesystem, [[<CMD>Neotree<CR>]], {silent = true})
+	map('n', m.bufferline, [[<CMD>BufferLinePick<CR>]], {silent = true})
+	map('n', m.set_cwd, [[<CMD>cd %:h<CR>]], {silent = true})
 
 	local tm = m.telescope
 	local telescopebi = require('telescope.builtin')
 
 	map('n', tm.find_files, telescopebi.find_files)
+	map('n', tm.buffers, telescopebi.buffers)
+	map('n', tm.help, telescopebi.help_tags)
+
+	map('t', m.escape_terminal, [[<C-\><C-n>]])
 end
 
 M.load = function ()
