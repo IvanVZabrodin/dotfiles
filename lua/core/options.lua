@@ -24,8 +24,8 @@ M.load = function ()
 
 	vim.g.loaded_netrw = true
 	vim.g.loaded_netrwPlugin = true
-	vim.g.coc_config_home = 'C:/Users/i_zabrodin23/AppData/Local/nvim/'
-	vim.g.coc_data_home = 'C:/Users/i_zabrodin23/AppData/Local/coc/'
+	vim.g.coc_config_home = 'C:/Users/ivanv/AppData/Local/nvim/'
+	vim.g.coc_data_home = 'C:/Users/ivanv/AppData/Local/coc/'
 end
 
 return M

@@ -18,7 +18,6 @@ return {
 			ensure_installed = { "c", "cpp", "html", "javascript", "css", "python", "cmake", "lua", },
 		}
 	},
-	{ "neonote", opts = {} },
 	{ "hex", opts = {} },
 	{ "lazydev", opts = {} },
 }
