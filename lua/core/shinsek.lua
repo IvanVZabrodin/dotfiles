@@ -14,19 +14,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ' '
 
+local strap = require('core.strap')
+local options = require('core.options')
+local keymaps = require('core.keymaps')
+local theme = require('core.theme')
+
+options.load()
+
 require('lazy').setup({
 	spec = { { import = 'plugins' }, },
 })
 
---TODO: Change the things --
-local strap = require('newconfig.lua.core.strap')
-local options = require('newconfig.lua.core.options')
-local keymaps = require('newconfig.lua.core.keymaps')
-
+theme.load()
 strap.load()
-options.load()
 keymaps.load()
 
-strap.post()
 options.post()
+theme.post()
+strap.post()
 keymaps.post()

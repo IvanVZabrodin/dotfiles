@@ -1,0 +1,15 @@
+[information]
+name = "schomberg"
+background = "dark"
+author = "You'll never know"
+
+[palette]
+fg = "#abb2bf"
+bg = "#291f4d"
+
+white = "#abb2bf"
+gray = "#474040"
+blue = "#6276bd"
+green = "#62bd7a"
+cyan = "#62acbd"
+red = "

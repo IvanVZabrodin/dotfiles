@@ -1,6 +1,12 @@
 local M = {}
 
+local codeDirs = {
+	[[C:/Users/i_zabrodin23/Code]],
+	[[C:/Users/i_zabrodin23/Code/Python Soc]],
+}
+
 M.load = function ()
+	vim.api.nvim_create_user_command('CodeDirs', function () return "awd" end, {})
 	vim.api.nvim_create_user_command('Commsect', function ()
 		vim.ui.input({prompt = "Section name: "}, function (input)
 			local commentchar = string.sub(vim.bo.commentstring, 0, string.find(vim.bo.commentstring, " ") - 1)
@@ -9,12 +15,6 @@ M.load = function ()
 			vim.api.nvim_put({fullstr}, "b", true, false)
 		end)
 	end, {})
-
-	vim.api.nvim_create_user_command('ImpFile', function ()
-		local filename = vim.api.nvim_buf_get_name(0)
-	end, {})
 end
-
-M.post = function () end
 
 return M

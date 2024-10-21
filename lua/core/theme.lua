@@ -1,25 +1,25 @@
--- Controls colorscheme and overrides --
 local M = {}
+local opts = require("options.options")
 
-M.load = function () -- Run before config
-	vim.opt.termguicolors = true
+M.load = function ()
+	local set = vim.g
+	set.termguicolors = true
 
-	local kanagawa = require('kanagawa')
-	kanagawa.setup {
-		overrides = function (colours)
-			return {
-				NormalFloat = { bg = "none" },
-				FloatBorder = { bg = "none" },
-				FloatTitle = { bg = "none" },
-			}
-		end
-	}
-	vim.cmd([[colorscheme kanagawa]])
+	vim.cmd('colorscheme ' .. opts.theme)
+	
+	-- local kanagawa = require('kanagawa')
+	-- kanagawa.setup {
+	-- 	overrides = function (colours)
+	-- 		return {
+	-- 			NormalFloat = { bg = "none" },
+	-- 			FloatBorder = { bg = "none" },
+	-- 			FloatTitle = { bg = "none" },
+	-- 		}
+	-- 	end
+	-- }
+
 end
 
-M.override = function () -- Run after config
-	vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { link = "FloatBorder" })
-	vim.api.nvim_set_hl(0, "NoiceCmdlineIconSearch", { link = "FloatBorder" })
-end
+M.post = function() end
 
 return M

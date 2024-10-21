@@ -1,6 +1,6 @@
 -- For multi-use plugins --
 return {
 	"nvim-lua/plenary.nvim",
-	"MunifTanjim/nui.nvim",
+	"muniftanjim/nui.nvim",
 	"nvim-tree/nvim-web-devicons",
 }
