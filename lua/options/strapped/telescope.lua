@@ -45,7 +45,7 @@ M.load = function ()
 
 	telescope.load_extension('fzy_native')
 	telescope.load_extension('coc')
-	
+
 	vim.api.nvim_create_user_command('Cdp', codedirpicker, {})
 	--codedirpicker()
 end

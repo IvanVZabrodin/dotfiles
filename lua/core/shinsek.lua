@@ -17,6 +17,7 @@ vim.g.mapleader = ' '
 local strap = require('core.strap')
 local options = require('core.options')
 local keymaps = require('core.keymaps')
+local usrcommands = require('core.usrcommands')
 local theme = require('core.theme')
 
 options.load()
@@ -28,8 +29,10 @@ require('lazy').setup({
 theme.load()
 strap.load()
 keymaps.load()
+usrcommands.load()
 
 options.post()
 theme.post()
 strap.post()
 keymaps.post()
+usrcommands.post()

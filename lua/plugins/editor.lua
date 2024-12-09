@@ -9,7 +9,6 @@ return {
 	{ "nvim-lualine/lualine.nvim" },
 	{ "rcarriga/nvim-notify" },
 	{ "akinsho/toggleterm.nvim" },
-	{ "fannheyward/telescope-coc.nvim" },
 	{ "nvim-telescope/telescope-fzy-native.nvim" },
 	{ "folke/which-key.nvim", event = "VeryLazy" },
 	{ "RaafatTurki/hex.nvim" },

@@ -12,6 +12,7 @@ U.show_docs = function ()
 end
 
 local telescopebi = require("telescope.builtin")
+local telescopeext = require("telescope").extensions
 
 local keymaps = {
 	-- LSP --
@@ -28,13 +29,23 @@ local keymaps = {
 	{"n", "<leader>cs", [[<CMD>Commsect<CR>]]},
 
 	-- Navigation --
-	{"n", "<leader>nf", [[<CMD>Neotree<CR>]], "Neotree"},
+	{"n", "\\", [[<CMD>Neotree float<CR>]], "Neotree (float)"},
+	{"n", "<leader>nf", [[<CMD>Neotree left<CR>]], "Neotree (left)"},
 	{"n", "<leader>B", [[<CMD>BufferLinePick<CR>]], "Pick buffer"},
 	{"n", "<leader>cd", [[<CMD>cd %:h<CR>]], "Set directory to current"},
 
 	{"n", "<leader>ff", telescopebi.find_files, "Find file (Telescope)"},
 	{"n", "<leader>fb", telescopebi.buffers, "Find buffers (Telescope)"},
 	{"n", "<leader>fh", telescopebi.help_tags, "Find help (Telescope)"},
+	{"n", "<leader>fg", telescopebi.live_grep, "Live grep (Telescope)"},
+	{"n", "<leader>fs", function () telescopeext.coc.document_symbols({}) end, "Find symbols (Telescope)"},
+
+	-- Editing --
+	{"n", "<C-c>", [[ciw]], "Change in word"},
+
+	-- Misc --
+	{"n", "<leader>vm", [[<CMD>mkview<CR>]], "Make view"},
+	{"n", "<leader>vl", [[<CMD>loadview<CR>]], "Load view"},
 }
 
 return keymaps

@@ -26,7 +26,8 @@ end
 M.folds = function ()
 	set.foldmethod = 'expr'
 	set.foldexpr = 'nvim_treesitter#foldexpr()'
-	set.foldenable = false
+	set.foldlevel = 99
+	set.foldtext = ""
 end
 
 M.tabs = function ()

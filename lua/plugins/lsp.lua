@@ -3,4 +3,5 @@ return {
 	{ "nvim-treesitter/nvim-treesitter" },
 	{ "numToStr/Comment.nvim" },
 	{ "folke/lazydev.nvim", ft = "lua" },
+	{ "fannheyward/telescope-coc.nvim" },
 }

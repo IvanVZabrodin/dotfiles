@@ -1,12 +1,12 @@
 local M = {}
 
 M.load = function ()
-	bufferline = require('bufferline')
+	local bufferline = require('bufferline')
 	bufferline.setup {
 		options = {
 			numbers = 'ordinal',
 			indicator = {
-				icon = 'H',
+				icon = '▎',
 				style = 'icon',
 			},
 			hover = {
@@ -16,7 +16,7 @@ M.load = function ()
 			},
 			diagnostics = 'coc',
 			color_icons = true,
-			separator_style = 'slant',
+			separator_style = 'slope',
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)
 				local icon = level:match('error') and ' ' or ' '
 				return ' ' .. icon .. count
